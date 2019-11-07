@@ -1,0 +1,26 @@
+#break语句和continue语句</br>
+
+#OJ输入数据的处理</br>
+
+#用freopen重定向输入</br>
+
+```
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	freopen("h:\\test.txt", "r", stdin);
+	int n, mx = 0;
+	while (cin >> n)
+	{
+		if (n > mx)
+			mx = n;
+	}
+	cout << mx << endl;
+	_sleep(10000);
+	return 0;
+}
+
+
+```
