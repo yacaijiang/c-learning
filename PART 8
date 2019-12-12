@@ -18,3 +18,33 @@ char *p= &ch1
 char *p;
 p = &ch;
 ```
+#指针作为函数参数</br>
+```
+void Swap(int $p1,*p2)
+{
+int tem=*p1;
+*p1=*p2;
+*p2=tmp;
+}
+int m=2,n=3;
+Swap(&m,&n);
+```
+#指针和数组</br>
+数组的名字是一个指针常量指向数组的起始地址</br>
+作为形参时，T *p 和T p[] 等价</br>
+#指针和字符串</br>
+#字符串操作库函数</br>
+```
+char *strchr(const char* str,int c);寻找字符c在字符串str中第一次出现的位置。如果找到，就返回指向该位置的char*指 针；如果str中不包含字符c,则返回NULL
+char* strstr(const char* str,const char *subSTr);寻找子串subStr在str中第一次出现的位置。如果找到，就返回指向该位置的指针；如 果str不包含字符串subStr，则返回NULL
+int stricmp(const char* s1,const char *s2);大小写无关的字符串比较。如果s1小于s2则返回负数；如果s1等于s2，返回0；s1大 于s2,返回正数。不同编译器编译出来的程序，执行stricmp的结果就可能不同。 
+int strncmp(const char* s1,const char *s2,int n);比较s1前n个字符组成的子串和s2前n个字符组成的子串的大小。若长度不足n，则取 整个串作为子串。返回值和strcmp类似。
+char *strncpy(char *dest, const char *src,int n);拷贝src的前n个字符到dest。如果src长度大于或等于n，该函数不会自动往dest中写 入‘\0’；若src长度不足n，则拷贝src的全部内容以及结尾的‘\0’到dest。
+char * strtok(char * str, const char * delim); 连续调用该函数若干次，可以做到：从str中逐个抽取出被字符串delim中的字符分隔 开的若干个子串。
+int atoi(char *s); 将字符串s里的内容转换成一个整型数返回。比如，如果字符串s的内容是“1234”,那 么函数返回值就是1234。如果s格式不是一个整数，比如是"a12"，那么返回0。 
+double atof(char *s); 将字符串s中的内容转换成实数返回。比如，"12.34"就会转换成12.34。如果s的格式 不是一个实数 ，则返回0。 
+char *itoa(int value, char *string, int radix); 将整型值value以radix进制表示法写入 string：
+```
+#指向指针的指针
+
+
